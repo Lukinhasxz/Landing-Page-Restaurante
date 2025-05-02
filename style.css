@@ -1,0 +1,229 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+    text-decoration: none;
+}
+.bg {
+    background: url('https://img.freepik.com/free-photo/italian-food-space-middle_23-2147686515.jpg?t=st=1745793671~exp=1745797271~hmac=24d3a74bba27cd0b84686a583f9b3427b5df863566577bbefc17a6670450ca39&w=740') center/cover no-repeat;
+    height: auto;
+    color: white;
+}
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.774)), url('https://img.freepik.com/free-photo/italian-food-space-middle_23-2147686515.jpg?t=st=1745793671~exp=1745797271~hmac=24d3a74bba27cd0b84686a583f9b3427b5df863566577bbefc17a6670450ca39&w=740') center/cover no-repeat;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.links a {
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 30px;
+}
+.links a:hover {
+    color: rgb(255, 217, 0);
+    transition: all 0.6s ease;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+    font-size: 30px;
+}
+.main a {
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px yellow;
+}
+.main a:hover {
+    transform: translateY(5px);
+    color: white;
+    background-color: gold;
+    transition: all 0.6s ease;
+}
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+#sobre h2 {
+    margin-top: 20px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: black;
+}
+#sobre p {
+    font-size: larger;
+    padding: 10px;
+}
+#serviços {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.6;
+    font-weight: bold;
+    padding: 20px;
+}
+#serviços h2 {
+    margin-top: 20px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: black;
+}
+#serviços h3 {
+    font-size: 25px;
+    margin: 10px;
+    color: antiquewhite;
+}
+#serviços li {
+    font-size: 20px;
+}
+.listas {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px antiquewhite;
+}
+#serviços h3:hover {
+    color: rgb(255, 217, 0);
+    transition: all 0.6s ease;
+}
+.listas:hover {
+    transform: translateY(-5px);
+    transition: all 0.7s ease;
+}
+.icones {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px;
+}
+.imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.icones:hover {
+    transform: translateY(-5px);
+    transition: all 0.7s ease;
+}
+.imgs p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contatos {
+    display: flex;
+    justify-content: center;
+}
+#contatos h2 {
+    margin-top: 20px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: black;
+}
+.ctts {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+.ctts a {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.zap {
+    box-shadow: 0px 0px 5px green;
+    color: white;
+}
+.insta {
+    color: white;
+    box-shadow: 0px 0px 5px rgb(255, 0, 170);
+}
+.endereço {
+    color: white;
+    box-shadow: 0px 0px 5px antiquewhite;
+}
+.ctts a:hover {
+    transform: translateY(-5px);
+    transition: all 0.6s ease;
+    box-shadow: 0px 0px 5px white;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    text-decoration: underline;
+}
+/* tela celulates */
+@media (max-width:500px) {
+    .imgs {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .imgs p {
+        margin-bottom: 15px;
+    }
+    .ctts {
+        grid-template-columns: 1fr;
+    }
+    .main {
+        margin: 20px;
+        text-align: center;
+    }
+}
+/* tablets */
+@media (min-width: 501px) and (max-width:1200px) {
+    .main {
+        text-align: center;
+    }
+    .imgs {
+        margin: 30px;
+    }
+}
+/* celulares menores possiveis */
+@media (max-width:310px) {
+    .imgs {
+        margin-right: 30px;
+        margin-left: 30px;
+        justify-content: center;
+    }
+    #sobre {
+        font-size: small;
+    }
+}
