@@ -282,7 +282,14 @@ i:hover {
         text-align: center;
     }
     .glr-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
+        width: 250px;
+    }
+    .glr-grid p {
+        font-size: small;
+    }
+    .glr-grid h3 {
+        font-size: 20px;
     }
 }
 /* tablets */
@@ -309,5 +316,12 @@ i:hover {
     }
     .glr-grid {
         grid-template-columns: 1fr;
+        width: 180px;
+    }
+    .glr-grid p {
+        font-size: small;
+    }
+    .glr-grid h3 {
+        font-size: 20px;
     }
 }
