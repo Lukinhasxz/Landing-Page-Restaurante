@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio Restaurante</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+    body {
+      background-color: rgb(15, 15, 15);
+    }
+    h1, h2, h3 {
+      font-weight: bolder;
+      text-align: center;
+      color: goldenrod;
+    }
+    p {
+      text-align: center;
+      color: white;
+    }
+    .cardapio {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+    .card {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px;
+      background: linear-gradient(135deg, rgb(29, 29, 29), rgb(0, 0, 0));
+      padding: 35px;
+      line-height: 1.6;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0px 0px 10px gold;
+      animation: fade 2s ease-in-out;
+    }
+    .card.active {
+      display: flex;
+    }
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 30px;
+      max-width: 800px;
+    }
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 50px;
+    }
+    button {
+      font-size: larger;
+      padding: 10px 20px;
+      background-color: goldenrod;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0px 0px 3px gold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(158, 120, 22);
+      transform: translateY(3px);
+      transition: all 0.6s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="cardapio">
+    <h1>Nosso Cardápio</h1>
+    
+    <div class="card active">
+      <img src="https://www.tortugarestaurante.com.br/wp-content/uploads/2021/01/molhomassa-e1610134197295.jpg" alt="Macarrão" />
+      <h2>Macarrão</h2>
+      <p>Cozido al dente, servido com molho de tomate fresco, alho, manjericão e parmesão. Simples e saboroso.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" alt="Pizza Margarita" />
+      <h2>Pizza Marguerita</h2>
+      <p>Massa leve com molho de tomate, muçarela fresca e manjericão. Clássica, leve e deliciosa.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://gastronomiacarioca.zonasul.com.br/wp-content/uploads/2022/07/lasanha_zona_sul_destaque.jpg" alt="Lasanha" />
+      <h2>Lasanha</h2>
+      <p>Camadas de massa, molho à bolonhesa, bechamel e queijo gratinado. Um prato farto e reconfortante.</p>
+    </div>
+  </div>
+
+  <div class="botoes">
+    <button onclick="mudarSlide(-1)">&lt; Anterior</button>
+    <button onclick="mudarSlide(1)">Próximo &gt;</button>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    let indiceAtual = 0;
+
+    function mostrarCard(indice) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === indice);
+      });
+    }
+
+    function mudarSlide(direcao) {
+      indiceAtual += direcao;
+      if (indiceAtual < 0) {
+        indiceAtual = cards.length - 1;
+      } else if (indiceAtual >= cards.length) {
+        indiceAtual = 0;
+      }
+      mostrarCard(indiceAtual);
+    }
+  </script>
+</body>
+</html>
